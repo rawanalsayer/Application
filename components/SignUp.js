@@ -31,7 +31,7 @@ export default class SignUp extends React.Component {
       selected2: undefined,
     };
   }
-  onValueChange2(value) {
+  onValueChange2(value: string) {
     this.setState({
       selected2: value,
     });
@@ -39,60 +39,47 @@ export default class SignUp extends React.Component {
 
   render() {
     return (
-      <Container style={styles.container}>
-      <ImageBackground
-            source={require('./backgroung.png')}
-            style={{ width: '100%', height: '100%' }}>
+      <Container>
         <Header>
-          <Left>
-            <Button transparent>
-              <Icon name="arrow-back" />
-            </Button>
-          </Left>
           <Body>
             <Title>Sign Up</Title>
           </Body>
-          <Right>
-            <Button transparent>
-              <Text>Cancel</Text>
-            </Button>
-          </Right>
         </Header>
         <Content>
-          <Card>
-           <CardItem>
-            <Text style={styles.paragraph}>>Be part of FortyDays Team and Join us now</Text>
+          <Card style={{  margin: 15}}>
+           <CardItem bordered style={{ backgroundColor: "#e3f1f1" }}>
+            <Text style={styles.paragraph}>Be part of FortyDays Team and Join us now </Text>
            </CardItem>
           </Card> 
-            <Form>
+            <Form style={{  margin: 15}}>
               <Item floatingLabel>
-                <Icon active name="contact" />
-                <Label>Name:</Label>
+                <Icon active name="contact" style={styles.icon} />
+                <Label style={styles.label}>Name:</Label>
                 <Input />
               </Item>
               <Item floatingLabel>
-                <Icon active name="mail" />
-                <Label>Email:</Label>
+                <Icon active name="mail" style={styles.icon}  />
+                <Label style={styles.label}>Email:</Label>
+                <Input />
+              </Item>
+              <Item floatingLabel last >
+                <Icon  active name="lock"  style={styles.icon} />
+                <Label style={styles.label}>Password:</Label>
                 <Input />
               </Item>
               <Item floatingLabel last>
-                <Icon active name="lock" />
-                <Label>Password:</Label>
+                <Icon active name="briefcase" style={styles.icon} />
+                <Label style={styles.label}>Education:</Label>
                 <Input />
               </Item>
               <Item floatingLabel last>
-                <Icon active name="briefcase" />
-                <Label>Education:</Label>
+                <Icon active name="clipboard"  style={styles.icon} />
+                <Label style={styles.label}>Position:</Label>
                 <Input />
               </Item>
-              <Item floatingLabel last>
-                <Icon active name="clipboard" />
-                <Label>Position:</Label>
-                <Input />
-              </Item>
-              <Item>
-                <Icon active name="create" />
-                <Label>Experience:</Label>
+              <Item style={{marginTop:20}}>
+                <Icon active name="create" style={styles.icon} />
+                <Label style={{marginLeft:13}}>Experience:</Label>
                 <Picker
                   mode="dropdown"
                   iosIcon={<Icon name="arrow-down" />}
@@ -109,18 +96,21 @@ export default class SignUp extends React.Component {
                 </Picker>
               </Item>
             </Form>
-            <ListItem>
-              <CheckBox checked={true} color="blue" />
+
+             <ListItem >
+             
+              <CheckBox style={{  marginLeft: 15}} checked={true} color="black" />
               <Body>
-                <Text>Agree</Text>
+               <Text>Please read the Terms of Use carefully before entering or participating. Agree</Text>
+                
               </Body>
             </ListItem>
-            <Button bordered  >
-              <Text>Create new account</Text>
-            </Button>
-          
+              <Button light disabled iconRight style={{width: 150, height: 45, margin: 30 , backgroundColor: "#e3f1f1"  }} >
+              <Text>Sign Up </Text>
+              </Button>
+             
         </Content>
-        </ImageBackground>
+        
       </Container>
     );
   }
@@ -135,10 +125,19 @@ const styles = StyleSheet.create({
     
   },
   paragraph: {
-
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#34495e',
+    color: 'black',
   },
+
+  icon:{
+   fontSize: 35
+
+  },
+    label:{
+   fontSize: 18,
+   marginLeft: 20
+
+  }
 });
