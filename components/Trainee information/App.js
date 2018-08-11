@@ -3,7 +3,6 @@ import {
   Container,
   Header,
   Content,
-  Text,
   Button,
   Icon,
   Right,
@@ -50,7 +49,7 @@ export default class CardShowcaseExample extends Component {
         thumbnailUri:
           'https://images.pexels.com/photos/247899/pexels-photo-247899.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
         name: 'Yousif Adel',
-                bodyImageUri:
+        bodyImageUri:
           'https://images.pexels.com/photos/132650/pexels-photo-132650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
         major: 'Software Engineering',
         university: 'Al-Yamamah',
@@ -86,15 +85,11 @@ export default class CardShowcaseExample extends Component {
     return (
       <Container>
         <Header>
-          <Left>
-            <Button transparent>
-              <Icon name="arrow-back" />
-            </Button>
-          </Left>
-          <Body >
-            <Title>Trainees</Title>
-          </Body>
-          <Right />
+          <Right>
+            <Body >
+              <Title>Trainees</Title>
+            </Body>
+          </Right>
         </Header>
         <Content>{trainees ? trainees : <Spinner color="blue" />}</Content>
       </Container>

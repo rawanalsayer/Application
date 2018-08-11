@@ -5,14 +5,14 @@ import Amplify, { Auth } from 'aws-amplify'
 import AWSConfig from './aws-exports'
 Amplify.configure(AWSConfig)
 
-import { ConfirmSignUp, ForgotPassword, Authenticator } from 'aws-amplify-react-native';
 import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
+import { Spinner } from 'native-base'
 
 
 
 import SignUp from './components/SignUp/SignUp'
 import SignIn from './components/SignIn/SignIn'
-import Home  from './components/Homepage/Home'
+import Home  from './components/Home'
 
 class ConSignUp extends React.Component {
 
@@ -46,20 +46,11 @@ class ConSignUp extends React.Component {
     )
   }
 }
-const Forgot = () => {
-  return (<Authenticator hideDefault={true}>
-    <ForgotPassword />
-  </Authenticator>
-  )
-}
 
-
-const AppStack = createStackNavigator({ Home: Home });
 const AuthStack = createStackNavigator({
   SignIn: SignIn,
   SignUp: SignUp,
   ConfirmSignUp: ConSignUp,
-  ForgotPassword: Forgot
 });
 
 
@@ -79,9 +70,6 @@ class Authenticator1 extends React.Component {
       .catch(err => console.log(err))
     console.log(state)
 
-
-
-
     this.props.navigation.navigate(state == undefined ? 'Auth' : 'App');
   };
 
@@ -91,7 +79,7 @@ class Authenticator1 extends React.Component {
 
     return (
       <View style={styles.container}>
-        <Text>loading...</Text>
+        <Spinner />
       </View>
     );
   }

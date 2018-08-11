@@ -1,8 +1,8 @@
 
-import React, {Component} from 'react';
-import { StyleSheet, TextInput, View,ImageBackground } from 'react-native';
-import { Container, Header, Content, Button, Text,Card, CardItem} from 'native-base';
-import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
+import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Container, Button, Text,Card, CardItem} from 'native-base';
+import { Table, Row, Rows } from 'react-native-table-component';
 import TaskChecker from '../shared/CheckBox'
 
 
@@ -97,27 +97,3 @@ utton:{
 );
 
 
-<<<<<<< HEAD
-||||||| merged common ancestors
-  render() {
-    const state = this.state;
-    return (
-      <CheckBox
-        checked={state.checked}
-        onPress={() => this.setState({ checked: !this.state.checked })}
-      />
-    );
-  }
-}
-=======
-  render() {
-    const state = this.state;
-    return (
-      <CheckBox  color="black"
-        checked={state.checked}
-        onPress={() => this.setState({ checked: !this.state.checked })}
-      />
-    );
-  }
-}
->>>>>>> 72fb47f510bfc8be4598e5d5232e52acd77ae935

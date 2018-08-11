@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import {
-  Container,
-  Header,
-  Content,
   Card,
   CardItem,
   Thumbnail,
   Text,
-  Button,
-  Icon,
   Left,
   Body,
 } from 'native-base';
@@ -20,7 +15,7 @@ export default class Trainee extends Component {
   render() {
     return (
           <Card style={{ flex: 1 }}>
-            <CardItem bordered style={{ backgroundColor: "#e3f1f1" ,  marginTop: 15}}>
+            <CardItem bordered style={{ backgroundColor: "#e3f1f1"}}>
               <Left>
                 <Thumbnail
                   source={{

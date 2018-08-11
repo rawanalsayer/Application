@@ -7,7 +7,7 @@ export default class CardItemBordered extends Component {
       <Container>
         <Header>
          <Body>
-            <Title>Sign Up</Title>
+            <Title>Home</Title>
           </Body>
         </Header>
         <Content padder style={{ flex: 1,

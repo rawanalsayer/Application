@@ -103,24 +103,24 @@ export default class SignUp extends React.Component {
 
         <Content>
 
-          <Card style={{  margin: 15}}>
+          <Card style={{ margin: 15 }}>
             <CardItem bordered style={{ backgroundColor: "#e3f1f1" }}>
               <Text style={styles.paragraph}>Be part of FortyDays Team and Join us now</Text>
             </CardItem >
           </Card>
-          <Form style={{  margin: 15}}>
-            <Item floatingLabel>
-              <Icon active name="contact"  style={styles.icon}/>
+          <Form>
+            <Item floatingLabel last>
+              <Icon active name="contact" style={styles.icon} />
               <Label style={styles.label}>Name:</Label>
               <Input onChangeText={value => this.onChangeText('fullName', value)} />
             </Item>
-            <Item floatingLabel>
-              <Icon active name="mail" style={styles.icon}/>
+            <Item floatingLabel last>
+              <Icon active name="mail" style={styles.icon} />
               <Label style={styles.label}>Email:</Label>
               <Input onChangeText={value => this.onChangeText('email', value)} />
             </Item>
             <Item floatingLabel last>
-              <Icon active name="lock" style={styles.icon}/>
+              <Icon active name="lock" style={styles.icon} />
               <Label style={styles.label}>Password:</Label>
               <Input onChangeText={value => this.onChangeText('password', value)} />
             </Item>
@@ -130,13 +130,13 @@ export default class SignUp extends React.Component {
               <Input onChangeText={value => this.onChangeText('education', value)} />
             </Item>
             <Item floatingLabel last>
-              <Icon active name="clipboard" style={styles.icon}/>
+              <Icon active name="clipboard" style={styles.icon} />
               <Label style={styles.label}>Position:</Label>
               <Input onChangeText={value => this.onChangeText('position', value)} />
             </Item>
-            <Item style={{marginTop:20}}>
-              <Icon active name="create" style={styles.icon}/>
-              <Label style={{marginLeft:13}}>Experience:</Label>
+            <Item style={{ marginTop: 20 }}>
+              <Icon active name="create" style={styles.icon} />
+              <Label >Experience:</Label>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -154,13 +154,13 @@ export default class SignUp extends React.Component {
             </Item>
           </Form>
           <ListItem>
-            <CheckBox onChanged={this.onChanged.bind(this)} style={{  marginLeft: 15}} />
+            <CheckBox onChanged={this.onChanged.bind(this)} style={{ marginLeft: 15 }} />
             <Body>
-               <Text>Please read the Terms of Use carefully before entering or participating. Agree</Text>
-                
-              </Body>
+              <Text>Please read the Terms of Use carefully before entering or participating. Agree</Text>
+
+            </Body>
           </ListItem>
-          <Button light disabled iconRight style={{width: 150, height: 45, margin: 30 , backgroundColor: "#e3f1f1"  }} onPress={() => this.signUp()} >
+          <Button block style={{ margin: 30 }} onPress={() => this.signUp()} >
             <Text>Sign Up </Text>
           </Button>
 
@@ -174,8 +174,7 @@ export default class SignUp extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    width: '100%',
-    height: '100%',
+   
 
 
   },
@@ -185,13 +184,13 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'black',
   },
-  icon:{
+  icon: {
     fontSize: 35
- 
-   },
-     label:{
+
+  },
+  label: {
     fontSize: 18,
-    marginLeft: 20
- 
-   }
+    marginLeft: 5
+
+  }
 });
