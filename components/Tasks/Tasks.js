@@ -9,7 +9,7 @@ export default class Tasks extends React.Component {
     render() {
     return (
      
-      <Container style={styles.container}>
+      <Container >
        
         <Header noLeft>
          <Body>
@@ -19,7 +19,6 @@ export default class Tasks extends React.Component {
          <Tabs>
           <Tab heading={ <TabHeading> ><Text>Individual</Text></TabHeading>}>
           < Individual/ >
-               
           </Tab>
           <Tab heading={ <TabHeading><Text>Groups</Text></TabHeading>}>
             < Groups/ >
@@ -33,23 +32,3 @@ export default class Tasks extends React.Component {
 }
 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-   
-    justifyContent: 'center',
-    
-
-  },
-  text:{
-    color: 'blue',
-    
-    fontSize: 20
-  },
-    forget:{
-    fontSize: 14
-
-
-  }
-
-});
