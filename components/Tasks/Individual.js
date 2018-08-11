@@ -1,8 +1,9 @@
 
 import React, {Component} from 'react';
 import { StyleSheet, TextInput, View,ImageBackground } from 'react-native';
-import { Container, Header, Content, Button, Body, Title, Tabs,TabHeading, Tab, Text,Card, CardItem, CheckBox} from 'native-base';
+import { Container, Header, Content, Button, Text,Card, CardItem} from 'native-base';
 import { Table, TableWrapper, Row, Rows, Col } from 'react-native-table-component';
+import TaskChecker from '../shared/CheckBox'
 
 
 export default class Individual extends React.Component {
@@ -75,21 +76,4 @@ const styles = StyleSheet.create({
 
 });
 
-class TaskChecker extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      checked: false,
-    };
-  }
 
-  render() {
-    const state = this.state;
-    return (
-      <CheckBox
-        checked={state.checked}
-        onPress={() => this.setState({ checked: !this.state.checked })}
-      />
-    );
-  }
-}
