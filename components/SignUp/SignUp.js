@@ -103,40 +103,40 @@ export default class SignUp extends React.Component {
 
         <Content>
 
-          <Card>
-            <CardItem>
+          <Card style={{  margin: 15}}>
+            <CardItem bordered style={{ backgroundColor: "#e3f1f1" }}>
               <Text style={styles.paragraph}>Be part of FortyDays Team and Join us now</Text>
-            </CardItem>
+            </CardItem >
           </Card>
-          <Form>
+          <Form style={{  margin: 15}}>
             <Item floatingLabel>
-              <Icon active name="contact" />
-              <Label>Name:</Label>
+              <Icon active name="contact"  style={styles.icon}/>
+              <Label style={styles.label}>Name:</Label>
               <Input onChangeText={value => this.onChangeText('fullName', value)} />
             </Item>
             <Item floatingLabel>
-              <Icon active name="mail" />
-              <Label>Email:</Label>
+              <Icon active name="mail" style={styles.icon}/>
+              <Label style={styles.label}>Email:</Label>
               <Input onChangeText={value => this.onChangeText('email', value)} />
             </Item>
             <Item floatingLabel last>
-              <Icon active name="lock" />
-              <Label>Password:</Label>
+              <Icon active name="lock" style={styles.icon}/>
+              <Label style={styles.label}>Password:</Label>
               <Input onChangeText={value => this.onChangeText('password', value)} />
             </Item>
             <Item floatingLabel last>
               <Icon active name="briefcase" />
-              <Label>Education:</Label>
+              <Label style={styles.label}>Education:</Label>
               <Input onChangeText={value => this.onChangeText('education', value)} />
             </Item>
             <Item floatingLabel last>
-              <Icon active name="clipboard" />
-              <Label>Position:</Label>
+              <Icon active name="clipboard" style={styles.icon}/>
+              <Label style={styles.label}>Position:</Label>
               <Input onChangeText={value => this.onChangeText('position', value)} />
             </Item>
-            <Item>
-              <Icon active name="create" />
-              <Label>Experience:</Label>
+            <Item style={{marginTop:20}}>
+              <Icon active name="create" style={styles.icon}/>
+              <Label style={{marginLeft:13}}>Experience:</Label>
               <Picker
                 mode="dropdown"
                 iosIcon={<Icon name="arrow-down" />}
@@ -154,13 +154,14 @@ export default class SignUp extends React.Component {
             </Item>
           </Form>
           <ListItem>
-            <CheckBox onChanged={this.onChanged.bind(this)} />
+            <CheckBox onChanged={this.onChanged.bind(this)} style={{  marginLeft: 15}} />
             <Body>
-              <Text>Agree</Text>
-            </Body>
+               <Text>Please read the Terms of Use carefully before entering or participating. Agree</Text>
+                
+              </Body>
           </ListItem>
-          <Button bordered onPress={() => this.signUp()} >
-            <Text>Create new account</Text>
+          <Button light disabled iconRight style={{width: 150, height: 45, margin: 30 , backgroundColor: "#e3f1f1"  }} onPress={() => this.signUp()} >
+            <Text>Sign Up </Text>
           </Button>
 
 
@@ -179,10 +180,18 @@ const styles = StyleSheet.create({
 
   },
   paragraph: {
-
     fontSize: 20,
     fontWeight: 'bold',
     textAlign: 'center',
-    color: '#34495e',
+    color: 'black',
   },
+  icon:{
+    fontSize: 35
+ 
+   },
+     label:{
+    fontSize: 18,
+    marginLeft: 20
+ 
+   }
 });

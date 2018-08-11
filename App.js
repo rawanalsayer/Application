@@ -12,6 +12,7 @@ import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
 
 import SignUp from './components/SignUp/SignUp'
 import SignIn from './components/SignIn/SignIn'
+import Home  from './components/Homepage/Home'
 
 class ConSignUp extends React.Component {
 
@@ -53,7 +54,7 @@ const Forgot = () => {
 }
 
 
-const AppStack = createStackNavigator({ Home: () => <Text>Home</Text> });
+const AppStack = createStackNavigator({ Home: Home });
 const AuthStack = createStackNavigator({
   SignIn: SignIn,
   SignUp: SignUp,
@@ -113,7 +114,7 @@ const styles = StyleSheet.create({
 export default createSwitchNavigator(
   {
     IsLoggedIn: Authenticator1,
-    App: AppStack,
+    App: Home,
     Auth: AuthStack,
   },
   {
