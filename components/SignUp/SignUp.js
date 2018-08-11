@@ -60,7 +60,6 @@ export default class SignUp extends React.Component {
     let fullName = this.state.fullName
 
     fullName = fullName.split(" ")
-    console.log(fullName.length)
     if (!(fullName.length > 2)) {
       Alert.alert('Name should be at least three words long')
       return
@@ -74,7 +73,6 @@ export default class SignUp extends React.Component {
       Alert.alert('All feilds should be filled')
       return
     }
-    console.log(this.state, fullName)
     Auth.signUp({
       username: email,
       password,

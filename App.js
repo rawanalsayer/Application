@@ -68,7 +68,6 @@ class Authenticator1 extends React.Component {
     const state = await Auth.currentSession()
       .then(res => res)
       .catch(err => console.log(err))
-    console.log(state)
 
     this.props.navigation.navigate(state == undefined ? 'Auth' : 'App');
   };
