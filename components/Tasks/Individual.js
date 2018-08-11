@@ -21,27 +21,26 @@ export default class Individual extends React.Component {
   render() {
     const state = this.state;
     return (
-      <Container  >
+      <Container style={{margin: 15}} >
          <Card>
-          <CardItem header>
-              <Text>Serverless</Text>
-            </CardItem>
-            
+          <CardItem header bordered style={styles.carditem} >
+              <Text style={{ color:'black', fontWeight: 'bold'}}>Serverless</Text>
+            </CardItem> 
           <Table borderStyle={{borderWidth: 0}} >
-           <Row data={state.tableHead}  style={styles.head} textStyle=                       {styles.text}/>
+           <Row data={state.tableHead}  textStyle={styles.headtext} />
              <Rows data={state.tableData} textStyle={styles.text}/>
              
         </Table>
 
         </Card>
-        <View style={{flexDirection: "row"}}>
-            <Button  light >
-            <Text>Save </Text>
-          </Button>
-              <Button light>
-            <Text>Cancel</Text>
-          </Button>
-          </View>
+        <View style={{flexDirection: "row" , justifyContent: "center" }}>
+            <Button light style={styles.utton}>
+              <Text>Save </Text>
+            </Button>
+            <Button light style={styles.utton}>
+              <Text>Cancel</Text>
+            </Button >
+        </View>
       </Container>
      
     );
@@ -57,23 +56,44 @@ const styles = StyleSheet.create({
   },
   content:{
     flex: 1,
-   flexDirectin: 'row',
+    flexDirection: 'row',
     justifyContent: 'space-between'
   },
 
+  headtext:{
+   color: 'black',
+     margin: 10,
+    fontSize: 16,
+    fontWeight: 'bold',
+    
+  },
 
   text:{
-    color: 'blue',
-     margin: 6,
+     color: 'black',
+     margin: 10,
     fontSize: 14
+    
   },
     forget:{
     fontSize: 14
 
   },
-  head: { height: 40, backgroundColor: '#f1f8ff' },
+  head: { height: 40, backgroundColor:'#e3f1f1' },
 
-});
+
+carditem: {
+ backgroundColor:'#e3f1f1',
+ 
+},
+utton:{
+  backgroundColor: "#e3f1f1" , margin:15 , width: 120,
+    height: 45, borderWidth: 0,
+    borderRadius: 5 
+}
+},
+
+
+);
 
 class TaskChecker extends React.Component {
   constructor(props) {
@@ -86,7 +106,7 @@ class TaskChecker extends React.Component {
   render() {
     const state = this.state;
     return (
-      <CheckBox
+      <CheckBox  color="black"
         checked={state.checked}
         onPress={() => this.setState({ checked: !this.state.checked })}
       />
