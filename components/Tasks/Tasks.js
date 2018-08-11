@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import { StyleSheet, TextInput, View,ImageBackground } from 'react-native';
 import { Container, Header, Content, Button, Body, Title, Tabs,TabHeading, Tab, Text,Card, CardItem } from 'native-base';
@@ -8,8 +7,8 @@ export default class Tasks extends React.Component {
   
     render() {
     return (
-     
-      <Container style={styles.container}>
+     <View style={styles.container}>
+      <Container >
        
         <Header noLeft>
          <Body>
@@ -19,7 +18,6 @@ export default class Tasks extends React.Component {
          <Tabs>
           <Tab heading={ <TabHeading> ><Text>Individual</Text></TabHeading>}>
           < Individual/ >
-               
           </Tab>
           <Tab heading={ <TabHeading><Text>Groups</Text></TabHeading>}>
             < Groups/ >
@@ -27,7 +25,7 @@ export default class Tasks extends React.Component {
         </Tabs>
         
       </Container>
-     
+     </View>
     );
   }
 }
@@ -36,20 +34,9 @@ export default class Tasks extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-   
+    backgroundColor: '#fff',
+    alignItems: 'center',
     justifyContent: 'center',
     
-
   },
-  text:{
-    color: 'blue',
-    
-    fontSize: 20
-  },
-    forget:{
-    fontSize: 14
-
-
-  }
-
 });
