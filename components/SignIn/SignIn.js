@@ -52,7 +52,7 @@ export default class SignIn extends React.Component {
               </Item>
               <Item floatingLabel>
                 <Label>Password</Label>
-                <Input onChangeText={value => this.onChangeText('password', value)} />
+                <Input onChangeText={value => this.onChangeText('password', value)} secureTextEntry={true} />
               </Item>
 
 
