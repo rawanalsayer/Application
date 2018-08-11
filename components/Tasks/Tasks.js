@@ -1,4 +1,3 @@
-
 import React, {Component} from 'react';
 import { StyleSheet, TextInput, View,ImageBackground } from 'react-native';
 import { Container, Header, Content, Button, Body, Title, Tabs,TabHeading, Tab, Text,Card, CardItem } from 'native-base';
@@ -8,7 +7,7 @@ export default class Tasks extends React.Component {
   
     render() {
     return (
-     
+     <View style={styles.container}>
       <Container >
        
         <Header noLeft>
@@ -26,9 +25,18 @@ export default class Tasks extends React.Component {
         </Tabs>
         
       </Container>
-     
+     </View>
     );
   }
 }
 
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    
+  },
+});
