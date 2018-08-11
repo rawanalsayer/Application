@@ -11,13 +11,14 @@ export default class CardShowcaseExample extends Component {
             <Title>Courses</Title>
           </Body>
           <Right />
-        </Header>           <Content>
+        </Header>   
+                <Content bordered style={{ backgroundColor: "#e3f1f1"}}>
           <Card style={{flex: 0}}>
             <CardItem>
               <Left>
                 <Thumbnail source={{uri: 'https://pluralsight2.imgix.net/paths/images/docker-copy-3135ce60d0.png'}} />
                 <Body>
-                  <Text> Docker Course</Text>
+                  <Text style={{fontSize: 22 ,color:"black"}}> Docker Course</Text>
                 </Body>
               </Left>
             </CardItem>
@@ -35,7 +36,7 @@ Docker is a computer program that performs operating-system-level virtualization
               <Left>
                 <Thumbnail source={{uri: 'https://www.python.org/static/opengraph-icon-200x200.png'}} />
                 <Body>
-                  <Text>Phython Course</Text>
+                  <Text style={{fontSize: 22 ,color:"black"}}>Phython Course</Text>
                 </Body>
               </Left>
             </CardItem>
@@ -52,7 +53,7 @@ Python is an interpreted, object-oriented, high-level programming language with 
               <Left>
                 <Thumbnail source={{uri: 'https://sdtimes.com/wp-content/uploads/2015/10/1026.sdt-javaone.png'}} />
                 <Body>
-                  <Text>Java</Text>
+                  <Text style={{fontSize: 22 ,color:"black"}}>Java</Text>
                 </Body>
               </Left>
             </CardItem>
@@ -68,7 +69,7 @@ Python is an interpreted, object-oriented, high-level programming language with 
               <Left>
                 <Thumbnail source={{uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCtYN4Aan9IEeJ8N8eO7x2E2C_ukNQ6f9WRi2NzuyLt_tJXNUE'}} />
                 <Body>
-                  <Text>Ubuntu Course</Text>
+                  <Text style={{fontSize: 22 ,color:"black"}}>Ubuntu Course</Text>
                 </Body>
               </Left>
             </CardItem>
