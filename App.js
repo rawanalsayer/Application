@@ -12,7 +12,7 @@ import { Spinner } from 'native-base'
 
 import SignUp from './components/SignUp/SignUp'
 import SignIn from './components/SignIn/SignIn'
-import Home  from './components/Home'
+import Main  from './components/Main'
 
 class ConSignUp extends React.Component {
 
@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
 export default createSwitchNavigator(
   {
     IsLoggedIn: Authenticator1,
-    App: Home,
+    App: Main,
     Auth: AuthStack,
   },
   {

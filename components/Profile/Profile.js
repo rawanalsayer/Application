@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Header, Content, Form, Item, Body, Input, Label, Text, Title, Button, Icon, View } from 'native-base';
 import { Auth } from 'aws-amplify'
 
-import { Image, StyleSheet } from 'react-native';
+import { Image, StyleSheet, Alert } from 'react-native';
 export default class FloatingLabelExample extends Component {
   render() {
     let pic = {
@@ -61,7 +61,7 @@ export default class FloatingLabelExample extends Component {
             </Button>
           </View>
           <View>
-            <Button danger full onPress={() => Auth.signOut().then(() => this.props.navigation.navigate('Auth')).catch(err => alert(err))}>
+            <Button danger full onPress={() => Auth.signOut().then(() => this.props.navigation.navigate('Auth')).catch(err => Alert.alert(err))}>
               <Text>Logout</Text>
             </Button>
           </View>

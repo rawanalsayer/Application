@@ -27,11 +27,15 @@ export default class SignIn extends React.Component {
 
   signIn() {
     const { username, password } = this.state
+    if (! username || ! password) {
+      Alert.alert('Both feilds must be filled')
+      return
+    }
     Auth.signIn(username, password)
       .then(() => {
         this.props.navigation.navigate('App')
       })
-      .catch(err => Alert.alert('error signing in!: ' + err))
+      .catch(err => Alert.alert('error signing in!: ' + err.message))
   }
 
   render() {

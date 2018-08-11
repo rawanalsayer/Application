@@ -12,7 +12,7 @@ import {
   Spinner
 } from 'native-base';
 import Trainee from './Trainee';
-export default class CardShowcaseExample extends Component {
+export default class Trainees extends Component {
   state = {
     trainees: [
       {

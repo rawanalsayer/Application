@@ -92,7 +92,7 @@ export default class SignUp extends React.Component {
       .then(() => this.props.navigation.navigate('ConfirmSignUp', {
         username: email
       }))
-      .catch(err => Alert.alert('Error signing up!: ' + err))
+      .catch(err => Alert.alert('Error signing up!: ' + err.message))
   }
 
   onChanged = (checked) => this.setState({ checked })
@@ -122,7 +122,7 @@ export default class SignUp extends React.Component {
             <Item floatingLabel last>
               <Icon active name="lock" style={styles.icon} />
               <Label style={styles.label}>Password:</Label>
-              <Input onChangeText={value => this.onChangeText('password', value)} />
+              <Input onChangeText={value => this.onChangeText('password', value)} secureTextEntry={true} />
             </Item>
             <Item floatingLabel last>
               <Icon active name="briefcase" />

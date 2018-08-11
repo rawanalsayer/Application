@@ -2,12 +2,12 @@ import React from 'react'
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs'
 import { Icon } from 'native-base'
 
-import Home from './Homepage/Home'
-import Skills from './Skilss-screen/App'
-import Latifah from './Latifah\'s\ work/App'
+import Home from './Home/Home'
+import Skills from './Skills/Skills'
+import Profile from './Profile/Profile'
 import Tasks from './Tasks/Tasks'
-import Courses from './Available\ Courses/App'
-import Trainee from './Trainee\ information/App'
+import Courses from './Courses/Courses'
+import Trainee from './Trainees/Trainees'
 
 const config = {
     Home: {
@@ -27,7 +27,7 @@ const config = {
         },
     },
     Profile: {
-        screen: Latifah,
+        screen: Profile,
         navigationOptions: {
             tabBarIcon: ({ tintColor }) =>
                 <Icon type="MaterialIcons" name="person-outline" style={{color: tintColor, fontSize: 24}} />
